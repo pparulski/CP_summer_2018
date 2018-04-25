@@ -16,4 +16,8 @@ public class GenericTriangle extends Triangle{
         return "My " + super.toString();
     }
 
+    @Override
+    public double calcPerimeter() {
+        return parA+parB+parC;
+    }
 }

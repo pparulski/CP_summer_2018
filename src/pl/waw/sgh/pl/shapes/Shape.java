@@ -1,6 +1,6 @@
 package pl.waw.sgh.pl.shapes;
 
-public abstract class Shape {
+public abstract class Shape implements ShapeCalculation{
     protected Double parA = 0d;
     protected Double parB = 0d;
     protected Double parC = 0d;
@@ -47,6 +47,10 @@ public abstract class Shape {
         //+ super.toString();
     }
 
-
-
+    @Override
+    public int compareTo(ShapeCalculation s) {
+        Double mySurface = Double.valueOf(this.calcSurface());
+        Double othersSurface = Double.valueOf(s.calcSurface());
+        return mySurface.compareTo(othersSurface);
+    }
 }

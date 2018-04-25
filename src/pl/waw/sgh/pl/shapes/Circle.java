@@ -14,4 +14,9 @@ public class Circle extends Shape {
     public String toString() {
         return "My " + super.toString();
     }
+
+    @Override
+    public double calcPerimeter() {
+        return 2*Math.PI*parA;
+    }
 }

@@ -21,4 +21,9 @@ public class Rectangle extends Shape {
         return "My " + super.toString();
     }
 
+    @Override
+    public double calcPerimeter() {
+        return 2*parA+2*parB;
+    }
+
 }
